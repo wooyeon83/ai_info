@@ -1,0 +1,53 @@
+name: Daily AI learning digest
+
+on:
+  schedule:
+    # 23:17 UTC = 다음 날 08:17 Asia/Seoul. 실제 시작은 지연될 수 있습니다.
+    - cron: '17 23 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '미리보기만 생성 (Notion 및 AI API 호출 없음)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-ai-learning-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    # 수동 검증은 허용하고 실제 저장 검증 후에만 예약을 활성화합니다.
+    if: github.event_name == 'workflow_dispatch' || vars.DIGEST_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test ingestion and delivery behavior
+        run: python -m unittest discover -s tests -v
+      - name: Collect and save
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ vars.NOTION_DATA_SOURCE_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          # anthropic: 한국어 AI 요약 / off: API 비용 없이 원문 발췌 저장
+          SUMMARY_MODE: ${{ vars.SUMMARY_MODE || 'off' }}
+          MAX_ITEMS: '3'
+          LOOKBACK_DAYS: '14'
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+        run: python digest.py
+      - name: Upload execution report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-learning-digest-${{ github.run_id }}
+          path: output/
+          retention-days: 14
+          if-no-files-found: ignore

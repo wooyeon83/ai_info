@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Claude Code",
+    "url": "https://github.com/anthropics/claude-code/releases.atom",
+    "priority": 3
+  },
+  {
+    "name": "MCP Python SDK",
+    "url": "https://github.com/modelcontextprotocol/python-sdk/releases.atom",
+    "priority": 2
+  },
+  {
+    "name": "LangGraph",
+    "url": "https://github.com/langchain-ai/langgraph/releases.atom",
+    "priority": 1
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "priority": 2,
+    "keywords": [
+      "agent",
+      "tool calling",
+      "mcp",
+      "evaluation",
+      "rag"
+    ]
+  },
+  {
+    "name": "NAVER D2",
+    "url": "https://d2.naver.com/d2.atom",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  },
+  {
+    "name": "Kakao Tech",
+    "url": "https://tech.kakao.com/feed/",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  },
+  {
+    "name": "LY Corporation Tech Blog",
+    "url": "https://techblog.lycorp.co.jp/ko/feed/index.xml",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  },
+  {
+    "name": "Coupang Engineering",
+    "url": "https://medium.com/feed/coupang-engineering",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  },
+  {
+    "name": "우아한형제들 기술블로그",
+    "url": "https://techblog.woowahan.com/feed/",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  },
+  {
+    "name": "Toss Tech",
+    "url": "https://toss.tech/rss.xml",
+    "priority": 2,
+    "keywords": [
+      "AI",
+      "LLM",
+      "에이전트",
+      "agent",
+      "agentic",
+      "Claude",
+      "MCP",
+      "RAG",
+      "프롬프트",
+      "생성형",
+      "데이터 엔지니어링",
+      "data engineering",
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Databricks",
+      "데이터 파이프라인",
+      "데이터 플랫폼"
+    ]
+  }
+]
