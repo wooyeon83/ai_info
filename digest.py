@@ -288,6 +288,10 @@ def run():
     sources = json.loads(Path(__file__).with_name("sources.json").read_text())
     all_items, errors, feeds = [], [], []
     for source in sources:
+        if source.get("enabled", True) is False:
+            feeds.append({"source": source["name"], "status": "disabled",
+                          "reason": source.get("disabled_reason", "설정에서 비활성화")})
+            continue
         try:
             items = parse_feed(request(source["url"], retry=True), source)
             all_items.extend(items)

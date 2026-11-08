@@ -132,3 +132,7 @@ DRY_RUN=true python3 digest.py
 - [Notion 데이터 소스 조회](https://developers.notion.com/reference/query-a-data-source)
 - [Notion integration 생성](https://www.notion.so/profile/integrations)
 - [Claude Messages API](https://platform.claude.com/docs/en/api/messages/create)
+
+## GitHub 실행 환경의 수집 범위
+
+2026-11-08 로컬에서는 피드 10곳이 성공했으나 GitHub Actions에서 우아한형제들 기술블로그가 HTTP 403을 반환했습니다. 접근 제한을 우회하지 않고 해당 출처를 sources.json에서 비활성화했습니다. 현재 활성 출처는 9곳(글로벌 4곳·국내 5곳)이며, 비활성 사유도 실행 보고서에 남깁니다.

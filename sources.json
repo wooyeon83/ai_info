@@ -149,7 +149,9 @@
       "Databricks",
       "데이터 파이프라인",
       "데이터 플랫폼"
-    ]
+    ],
+    "enabled": false,
+    "disabled_reason": "GitHub Actions에서 HTTP 403. 접근 제한을 우회하지 않고 수집 보류 (2026-11-08)."
   },
   {
     "name": "Toss Tech",
